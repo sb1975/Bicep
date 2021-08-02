@@ -1,0 +1,22 @@
+trigger:
+- master
+
+name: Deploy Bicep files
+
+variables:
+  vmImageName: 'ubuntu-latest'
+  resourceGroupName: 'RG-01'
+  azureServiceConnection: 'Azure Pass - Sponsorship-13July(90005c67-7555-493b-ba11-a38de0084ce6)'
+  location: 'eastus'
+  templateFile: './main.bicep'
+pool:
+  vmImage: $(vmImageName)
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: $(azureServiceConnection)
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: |
+      az group delete --name $(resourceGroupName)
