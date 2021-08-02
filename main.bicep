@@ -31,7 +31,7 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
 }
 
 resource exampleStorage 'Microsoft.Storage/storageAccounts@2021-04-01' = {
-  name: storageName
+  name: 'storageName'
   location: 'eastus'
   sku: {
     name: 'Standard_LRS'
