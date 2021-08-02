@@ -21,7 +21,7 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
         }
       }
       {
-        name: 'vnetBicepExample01'
+        name: 'vnetBicepExample02'
         properties: {
           addressPrefix: '10.0.1.0/24'
         }
