@@ -21,4 +21,4 @@ steps:
     inlineScript: |
       az --version
       az group create --name $(resourceGroupName) --location $(location)
-      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters storageName=storageforbicep8aug
+      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters storageName=strgforbicep8aug
